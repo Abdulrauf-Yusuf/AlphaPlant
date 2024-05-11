@@ -1,0 +1,27 @@
+.flex-container {
+    display: flex;
+    background-color: #0C3C36;
+    flex-wrap: wrap;
+    margin: 20px 0;
+    box-sizing: border-box;
+    overflow: hidden; /* Add overflow hidden to prevent horizontal scrolling */
+}
+
+.sub-container {
+    display: flex;
+    box-sizing: border-box;
+    flex-wrap: nowrap;
+}
+
+.flex-item {
+    flex: 1 1 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .flex-item {
+        flex-basis: 50%;
+    }
+}

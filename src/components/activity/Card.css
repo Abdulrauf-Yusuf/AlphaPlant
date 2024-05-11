@@ -1,0 +1,57 @@
+.container-card{
+    display: grid;
+    gap: 10px;
+    margin: 5em auto;
+    grid-template-areas: 
+    "header"
+    "one"
+    "two"
+    "three"
+    ;
+}
+.header{
+    grid-area: header;
+    color:#0c3c36;
+    text-align: center;
+}
+.header h1{
+    display: inline;
+    border-bottom: 2px solid #0c3c36;
+}
+.one{
+    grid-area: one;
+}
+.two{
+    grid-area: two;
+}
+.three{
+    grid-area: three;
+}
+.card-title{
+    margin-bottom: 4px;
+}
+.card-container{
+    padding: 5px 20px;
+    margin: 10px auto;
+    width: 295px;
+    background-color:#d8f1d8 ;
+}
+
+@media (min-width: 768px){
+    .container-card {
+        grid-template-areas: 
+        "header"
+        "one two "
+        "three . "
+        ;
+    }
+}
+
+@media (min-width: 1025px){
+    .container-card {
+        grid-template-areas: 
+        ". header ."
+        "one two  three"
+        ;
+    }
+}

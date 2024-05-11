@@ -1,0 +1,48 @@
+.grid-container{
+    display: grid;
+    color: #D1FDD6;
+    box-sizing: border-box;
+    grid-template-areas:
+     "header"
+      "content"
+      "category"
+      "quick-links"
+      "contact" ;
+}
+.center{
+    display: block;
+    margin-left: 0;
+    padding-left: 0;
+   
+}
+.center li{
+    list-style-type: none;
+}
+
+.header{
+    grid-area: header;
+}
+.content{
+    grid-area: content;
+}
+.category{
+    grid-area: category;
+}
+.quick-links{
+    grid-area:quick-links;
+}
+.contact{
+    grid-area: contact;
+}
+@media (min-width: 768px) {
+    .grid-container{
+        grid-template-areas: 
+        "header . . ."
+        "content category quick-links contact"
+        ;
+    }
+    .center{
+        display:grid ;
+        margin: 0 auto;
+    }
+}
